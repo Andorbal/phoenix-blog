@@ -9,6 +9,8 @@ defmodule Pxblog.User do
 
     timestamps
 
+    has_many :posts, Pxblog.Post
+
     # Virtual fields
     field :password, :string, virtual: true
     field :password_confirmation, :string, virtual: true
