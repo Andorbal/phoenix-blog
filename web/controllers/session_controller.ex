@@ -46,7 +46,7 @@ defmodule Pxblog.SessionController do
       conn
         |> put_session(:current_user, nil)
         |> put_flash(:error, "Invalid username/password combination!")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: session_path(conn, :new))
         |> halt()
   end
 end
