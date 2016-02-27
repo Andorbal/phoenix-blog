@@ -1,6 +1,5 @@
 defmodule Pxblog.SessionControllerTest do
   use Pxblog.ConnCase
-  alias Pxblog.User
   alias Pxblog.Factory
 
   setup do
