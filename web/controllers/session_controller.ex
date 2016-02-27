@@ -26,9 +26,7 @@ defmodule Pxblog.SessionController do
   end
 
   defp sign_in(user, _password, conn) when is_nil(user) do
-    conn
-      |> put_flash(:error, "Invalid username/password combination!")
-      |> redirect(to: page_path(conn, :index))
+    failed_login conn  
   end
 
   defp sign_in(user, password, conn) do
