@@ -44,7 +44,8 @@ defmodule Pxblog.Mixfile do
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 2.1"},
      {:ex_machina, "~> 0.6"},
-     {:earmark, "~> 0.2.1"}
+     {:earmark, "~> 0.2.1"},
+     {:exrm, "~> 0.19"}
    ]
   end
 

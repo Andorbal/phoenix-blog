@@ -21,7 +21,7 @@ find_or_create_role = fn role_name, admin ->
       %Role{}
         |> Role.changeset(%{name: role_name, admin: admin})
         |> Repo.insert!
-    [role | tail] ->
+    [role | _tail] ->
       IO.puts "Role: #{role_name} already exists, skipping"
       role
   end
@@ -35,7 +35,7 @@ find_or_create_user = fn username, email, role ->
           password: "test", password_confirmation: "test",
           role_id: role.id})
         |> Repo.insert
-    [user | tail] ->
+    [user | _tail] ->
       IO.puts "User: #{username} already exists, skipping"
       user
   end
